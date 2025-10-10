@@ -21,6 +21,17 @@
     }(window, document, 'acDataLayer', 'ATM-D1s1ZJemEpLggugh'));
 </script>
     <script src="https://pxl-support-vm.dev.altcraft.com/ak_container.js?id=OXw2" ></script>
+    <script>
+	document.getElementById('init_sub').addEventListener('click', function() {
+	try {
+		const akPush = new AKPush();
+		akPush.initSubscription()
+		}
+	catch (e) {
+		console.log(e);
+		}
+	});
+</script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -110,6 +121,7 @@
     <header>
         <h1>Мир Книг</h1>
         <p>Погружайся в мир литературы и находи книги по душе!</p>
+        <button id="init_sub">Подписаться на уведомления</button>
     </header>
     
     <nav>
